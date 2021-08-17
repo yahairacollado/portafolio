@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: RoxboroughCF-Bold;
-  src: url('/assets/Tipografias/RoxboroughCF-Bold.otf');
+  src: url(../assets/Tipografias/RoxboroughCF-Bold.otf);
 }
 
 *{
@@ -13,8 +13,8 @@ body{
 margin: 0;
 padding: 0;
 background-color: #FFEADD;
-background-image: url(/assets/Imágenes/grain.png);
 background-position: center 0;
+background-image: url(../assets/Imágenes/grain.png);
 color: #1E0800;
 }
 
@@ -377,11 +377,11 @@ footer .footer-right-section {
 }
 
 #my-img-left:hover {
-  content: url('/assets/íconos/previous-hover.png');
+  content: url(../assets/íconos/previous-hover.png);
 }
 
 #my-img-right:hover {
-  content: url('/assets/íconos/next-hover.png');
+  content: url(../assets/íconos/next-hover.png);
 }
 
 /* Primer Taller JS */
