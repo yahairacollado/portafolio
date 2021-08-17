@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: RoxboroughCF-Bold;
-  src: url(../assets/Tipografias/RoxboroughCF-Bold.otf);
+  src: url(../assets/fonts/RoxboroughCF-Bold.otf);
 }
 
 *{
@@ -14,7 +14,7 @@ margin: 0;
 padding: 0;
 background-color: #FFEADD;
 background-position: center 0;
-background-image: url(../assets/Imágenes/grain.png);
+background-image: url(../assets/images/grain.png);
 color: #1E0800;
 }
 
