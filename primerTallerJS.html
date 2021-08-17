@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="
+    Calculate the area and perimeter of geometric figures such as square, triangle and circle"
+  />
+  <meta
+    name="keywords"
+    content="HTML, CSS, JavaScript, sass, calculadore."
+  /> 
+  <meta name="author" content="Yahaira Collado">
+  <meta name="robots" content="index,follow" />
+  <title>First Javascript Workshop</title>
+  <link rel="stylesheet" href="/jsBasico/portafolio/css/main.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <section class="nav-logo-container">
+        <a href="index.html">YC</a>
+      </section>
+      <section class="nav-menu-links">
+       <div class="menu-links-container">
+         <a href="/jsBasico/portafolio/perfil.html">About me</a>
+         <a href="/">Blog</a>
+       </div>
+       <div class="bug-button-container">
+         <a href="mailto:yahairavittoria@gmail.com" class="bug-button">Get in touch</a>
+       </div>
+     </section>
+    </nav>
+   </header>
+   <main>
+     <div class="taller1-container">
+       <div class="taller1-title-container">
+        <h1>Geometric Calculator</h1>
+        <h2>1st workshop of the JavaScript Practical Course</h2>
+       </div>
+       <div class="figures-container">
+         <div class="card">
+           <!-- cuadrado -->
+           <p class="card-title">Square</p>
+           <form action="" class="card-form">
+            <label for="ladoCuadrado" class="card-form-subtitle">
+              How long is one side?
+            </label>
+            <div class="div-input-cuadrado">
+              <input
+                id="ladoCuadrado"
+                type="number"
+                placeholder="number"
+                class="input"
+              />
+              <select name="" id="unidadCuadrado">
+                <option value="cm">cm</option>
+                <option value="m">m</option>
+                <option value="mm">mm</option>
+              </select>
+            </div>
+            <div class="card-buttons">
+              <button
+              type="button"
+              class="button coralprimary"
+              onclick="calcularAreaCuadrado()"
+              >Area</button>
+              <button
+                type="button"
+                class="button coralsecondary"
+                onclick="calcularPerimetroCuadrado()"
+              >
+                Perimeter
+              </button>
+            </div>
+            <p class="card-form-subtitle">Result:</p>
+            <div class="card-form-result">
+              <p class="text-result" id="resultCuadrado"></p>
+            </div>
+          </form>
+         </div>
+         <div class="card">
+           <!-- Triángulo -->
+           <p class="card-title">Triangle</p>
+           <form action="" class="card-form">
+             <label for="ladoAtriangulo" class="card-form-subtitle">
+              How long is one side?
+              </label>
+             <div class="div-input-cuadrado">
+               <input
+                type="number"
+                placeholder="number"
+                id="ladoAtriangulo"
+                class="input"
+                />
+                <select name="" id="">
+                  <option value="cm">cm</option>
+                  <option value="m">m</option>
+                </select>
+             </div>
+             <label for="ladoBTriangulo" class="card-form-subtitle">
+              How long is the other side?
+             </label>
+             <div class="div-input-cuadrado">
+               <input
+                type="number"
+                placeholder="number"
+                id= "ladoBTriangulo"
+                class="input"
+                />
+                <select name="" id="">
+                  <option value="cm">cm</option>
+                  <option value="m">m</option>
+                </select>
+             </div>
+             <label for="baseTriangulo" class="card-form-subtitle">
+              How long is the base?
+             </label>
+             <div class="div-input-cuadrado">
+               <input
+                type="number"
+                placeholder="number"
+                id="baseTriangulo"
+                class="input"
+                />
+                <select name="" id="selectBaseT">
+                  <option value="cm">cm</option>
+                  <option value="m">m</option>
+                </select>
+             </div>
+             <div class="card-buttons">
+              <button
+                class="button coralprimary"
+                type="button"
+                onclick="calcularAreaTriangulo()"
+              >
+              Area
+             </button>
+             <button
+                class="button coralsecondary"
+                type="button"
+                onclick="calcularPerimetroTriangulo()"
+              >
+              Perimeter
+             </button>
+             </div>
+             <p class="card-form-subtitle">Result:</p>
+             <div class="card-form-result">
+               <p class="text-result" id="resultTriangulo"></p>
+              </div>
+           </form>
+         </div>
+         <div class="card">
+           <!-- Círculo -->
+           <p class="card-title">Circle</p>
+            <form action="" class="card-form">
+              <label for="ladoCuadrado" class="card-form-subtitle">
+                What is the radius?
+              </label>
+              <div class="div-input-cuadrado">
+                <input
+                type="number"
+                placeholder="number"
+                id="radioCirculo"
+                class="input"
+                />
+                <select name="" id="selectCirculo">
+                  <option value="cm">cm</option>
+                  <option value="m">m</option>
+                </select>
+              </div>
+              <div class="card-buttons">
+                <button
+                  type="button"
+                  class="button coralprimary"
+                  onclick="calcularAreaCirculo()"
+                >
+                  Area
+                </button>
+                <button
+                  type="button"
+                  class="button coralsecondary"
+                  onclick="calcularCircunferencia()"
+                >
+                Circumference
+                </button>
+              </div>
+              <button
+                type="button"
+                class="button coralprimary"
+                onclick="calcularDiametro()"
+              >
+                Diameter
+              </button>
+              <p class="card-form-subtitle">Result:</p>
+              <div class="card-form-result">
+                <p class="text-result" id="resultCirulo"></p>
+              </div>
+            </form>
+         </div>
+       </div>
+       <div class="div-buttons-container">
+         <div class="div-arrows-container">
+          <a><img id="my-img-left" src="/jsBasico/portafolio/assets/íconos/previous.png" alt="boton previus"></a>
+          <a><img id="my-img-right" src="/jsBasico/portafolio/assets/íconos/next.png" alt="boton next"></a>
+         </div>
+         <div class="div-button-repository">
+          <a href="/">Visit repository ➦</a>
+         </div>
+       </div>
+     </div>
+   </main>
+   <footer class="footer-primertaller">
+    <section class="footer-container">
+      <div class="footer-left-section">
+        <p>Follow me on:</p>
+        <a href="https://github.com/yahacoral"><img src="/jsBasico/portafolio/assets/íconos/github.png" alt="logo de github"></a>
+        <a href="https://www.linkedin.com/in/yahairacollado/"><img src="/jsBasico/portafolio/assets/íconos/linkedin.png" alt="logo de linkedin"></a>
+      </div>
+     <div class="footer-right-section">
+      <p>©2021 Yahaira Collado.</p>
+     </div>
+    </section>
+  </footer>
+  <script src="./primerTallerJS.js"></script>
+</body>
+</html>

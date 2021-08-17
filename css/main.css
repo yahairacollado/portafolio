@@ -1,0 +1,559 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant&display=swap');
+
+@font-face {
+  font-family: RoxboroughCF-Bold;
+  src: url('/jsBasico/portafolio/assets/Tipografias/RoxboroughCF-Bold.otf');
+}
+
+*{
+  box-sizing: border-box;
+  }
+
+body{
+margin: 0;
+padding: 0;
+background-color: #FFEADD;
+background-image: url(/jsBasico/portafolio/assets/Imágenes/grain.png);
+background-position: center 0;
+color: #1E0800;
+}
+
+.home-body {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color:#1E0800;
+}
+
+a:hover {
+  color: #D97A61;
+}
+
+header{
+  width: 100%;
+  height: 60px;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  width: 100%;
+  height: auto;
+}
+
+nav .nav-logo-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 40px;
+  margin-top: 30px;
+  font-family: 'RoxboroughCF-Bold';
+  font-size: 30px;  
+}
+
+nav .nav-menu-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 40px;
+  margin-top: 30px;
+}
+
+nav .nav-menu-links .menu-links-container a{
+  font-family: 'Assistant', sans-serif;
+  font-size: 15px;
+  padding-right: 15px;
+}
+
+nav .nav-menu-links .bug-button-container .bug-button{
+  display:inline-block;
+  border:0.1em solid #D97A61;
+  padding:0.35em 1.2em;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  font-family: 'Assistant', sans-serif;
+  font-size: 15px;
+  text-align:center;
+}
+
+nav .nav-menu-links .bug-button-container :hover{
+ background-color: #D97A61; 
+ color: antiquewhite;
+}
+
+main {
+  width: 100%;
+  height: auto;
+}
+
+.home-intro-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.home-intro-container h1 {
+  font-family:'RoxboroughCF-Bold';
+  font-size: 50px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.home-intro-container h2 {
+  font-family:'Assistant', sans-serif;
+  font-size: 20px; 
+  margin: 0;
+}
+
+.home-proyects-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 40px 40px 40px;
+  text-align: center;
+}
+
+.home-proyects-container h3 {
+  margin: 10px 0px 10px;
+  font-family: 'Assistant', sans-serif;
+  font-size: 20px;
+  text-align: start;
+}
+
+.home-proyects-container .scroll-container {
+  width: 100%;
+}
+
+.home-proyects-container .scroll-container .carousel{
+  height: 400px;
+  width: 90%; 
+  margin: 20px auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.home-proyects-container .scroll-container .carousel .slider {
+  display: flex;
+  height: 100%;
+  width: 200%;
+}
+
+.home-proyects-container .scroll-container .carousel .slider section {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls .arrow{
+  position: absolute;
+  top: 56%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.controls img{
+  width: 40px;
+}
+
+.left {
+  left: 40px;
+}
+
+.right {
+  right: 40px;
+}
+
+.controls ul {
+  list-style: none;
+  display: flex;
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  margin: 0;
+  padding: 0;
+  transform: translate(-50%);
+}
+.controls ul li {
+  width: 10px;
+  height: 10px;
+  background: #D97A61;
+  border: 2px solid #D97A61;
+  border-radius: 50px;
+  margin: 10px;
+  cursor: pointer;
+}
+.controls ul li.selected {
+  background: transparent;
+}
+
+.home-proyects-container .scroll-container .carousel .slider .article-container{
+  display: inline-flex;
+  margin: 15px 5px 20px 20px;
+  text-align: left;
+}
+ 
+.home-proyects-container .carousel .slider .article-container .box-image-container {
+  width: 220px;
+  height: 300px;
+  background-color: rgba(226, 163, 140,0.3);
+  border-radius: 6%;
+  margin-bottom: 15px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.home-proyects-container .carousel .slider .article-container .box-image-container:hover {
+  transform: scale(1.15);
+  background-color: rgb(217, 123, 97,0.4);
+}
+
+.home-proyects-container .carousel .slider .article-container .box-image-container img {
+  width: 65%;
+}
+
+.home-proyects-container .carousel .slider .article-container .title-container {
+  margin-top: 30px;
+  font-family:  'Assistant', sans-serif;
+  font-size: 18px;
+}
+
+.home-proyects-container .carousel .slider .article-container .article-tag {
+  font-family: 'RoxboroughCF-Bold';
+  font-size: 15px;
+  letter-spacing: 2;
+  writing-mode: vertical-rl;
+  margin-left: 10px;
+}
+
+footer {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer-primertaller{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 0;
+  margin-top: 35px;
+}
+
+footer .footer-container {
+  width: 96%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-clip: padding-box;  
+  font-size: 15px;
+  font-family:'Assistant', sans-serif;
+  border-top: 1px solid rgb(30, 8, 0, 0.2);
+}
+
+footer .footer-left-section {
+  justify-self: left;
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+}
+
+footer .footer-left-section img {
+  display: flex;
+  align-items: center;
+  width: 25px;
+  margin-left: 8px;
+}
+
+footer .footer-right-section {
+  display: flex;
+  align-items: center;
+  justify-self: right;
+  margin-right: 30px;
+}
+
+.profile-tittle-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.profile-tittle-container h1 {
+  font-family:'RoxboroughCF-Bold';
+  font-size: 35px;
+  margin: 0;
+}
+
+.profile-main-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin: 30px;
+}
+
+.profile-main-container .profile-resume-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.profile-main-container .profile-image-container img{
+  width: 254px;
+}
+
+.profile-main-container .profile-image-container  p{
+  width: 254px;
+  font-family: 'Assistant', sans-serif;
+  font-size: 15px;
+  background-color: #E2A38C;
+  color: #FFEADD;
+  padding: 10px 10px 10px;
+  border-radius: 4px;
+}
+
+.profile-main-container .profile-description-container {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.container-slider {
+  margin: auto;
+  overflow: hidden;
+  /* position: relative; */
+}
+
+.carousel-inner {
+  display: flex;
+  width: 300%;
+  height: 380px;
+  margin-left: -100%;
+}
+
+.slider-section {
+  width: 100%;
+  padding-right: 100px;
+}
+
+.slider-section h2 {
+  margin: 0px 0 30px 0;
+  font-family: 'Assistant', sans-serif;
+  font-size: 24px;
+}
+
+.slider-section p {
+  margin: 30px 0 30px 0px;
+  font-family: 'Assistant', sans-serif;
+  font-size: 17px;
+}
+
+.profile-control {
+  display: flex;
+  transform: translateY(-50%);
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+.profile-control img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+#my-img-left:hover {
+  content: url('/jsBasico/portafolio/assets/íconos/previous-hover.png');
+}
+
+#my-img-right:hover {
+  content: url('/jsBasico/portafolio/assets/íconos/next-hover.png');
+}
+
+/* Primer Taller JS */
+
+.taller1-container {
+  padding: 0 40px;
+}
+
+.taller1-title-container{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.taller1-container h1 {
+  font-family: 'RoxboroughCF-Bold';
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-bottom: 5px;
+}
+
+.taller1-container h2 {
+  font-size: 20px;
+  font-family:'Assistant', sans-serif;
+  text-align: center;
+  margin-top: 0;
+}
+
+.taller1-container .figures-container {
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media (min-width: 1024px) {
+  .taller1-container {
+    height: 79vh;
+    background-color: #FFEADD;
+  }
+}
+
+.button {
+  border: 2px solid;
+  border-radius: 7px;
+  padding: 6px 12px;
+  font: 600 1.125rem/1.6875rem 'Assistant', sans-serif;
+}
+
+.button:hover {
+  box-shadow: 4px 2px #888888;
+}
+
+.coralprimary {
+  background-color: #D97A61;
+  color: white;
+  border: 2px solid #D97A61;
+  width: 100%;
+}
+
+.coralsecondary {
+  background-color: white;
+  color: #D97A61;
+  width: 100%;
+}
+
+.card {
+  background-color: rgba(226, 163, 140,0.3);
+  display: flex;
+  flex-direction: column;
+  padding-block: 30px;
+  gap:8px;
+  border-radius: 17px;
+}
+
+@media (max-width: 1024px) {
+  .card {
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    padding-inline: 24px;
+    min-width: 295px;
+    width: 28%;
+    max-width: 384px;
+  }
+}
+
+.card-title {
+  font-size: 22px;
+  font-family:'RoxboroughCF-Bold';
+  margin: 0px 0 10px;
+  color: #1E0800;
+}
+
+.card-form {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-form-subtitle{
+  font-size: 16px;
+  font-family:'Assistant', sans-serif;
+  margin: 5px;
+}
+
+.div-input-cuadrado {
+  display: flex;
+  gap: 16px;
+}
+
+.div-input-cuadrado input {
+  padding: 8px;
+  width: 100%;
+}
+
+.card-buttons {
+  gap: 16px;
+  display: flex;
+}
+
+.card-form-result {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border: 2px solid #312f2f;
+  border-radius: 7px;
+}
+
+.card-form-result p {
+  font-size: 15px; 
+  font-family: 'Assistant', sans-serif;
+  margin: 0;
+}
+
+.div-buttons-container {
+  width: 100%;
+  height: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 10px;
+}
+
+.div-button-repository{
+display: flex;
+justify-content: flex-end;
+align-items: center;
+}
+
+.div-button-repository a {
+  border:0.1em solid #D97A61;
+  padding:0.35em 1.2em;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  font-family: 'Assistant', sans-serif;
+  font-size: 15px;
+  text-align:center;
+}
+.div-button-repository a:hover{
+ background-color: #D97A61; 
+ color: antiquewhite;
+} 
+
+.div-arrows-container img {
+  width: 40px;
+}
