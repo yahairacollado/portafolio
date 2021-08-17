@@ -221,7 +221,7 @@ main {
 }
 
 .home-proyects-container .carousel .slider .article-container .box-image-container img {
-  width: 65%;
+  width: 90%;
 }
 
 .home-proyects-container .carousel .slider .article-container .title-container {
@@ -377,11 +377,11 @@ footer .footer-right-section {
 }
 
 #my-img-left:hover {
-  content: url(../assets/íconos/previous-hover.png);
+  content: url(../assets/icons/previous-hover.png);
 }
 
 #my-img-right:hover {
-  content: url(../assets/íconos/next-hover.png);
+  content: url(../assets/icons/next-hover.png);
 }
 
 /* Primer Taller JS */
