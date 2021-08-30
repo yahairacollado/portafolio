@@ -7,27 +7,26 @@
   <title>Yahaira Collado | Proyects</title>
   <link rel="stylesheet" href="./css/main.css">
 </head>
-<body class="home-body">
-  <header class="header">
+<body>
+  <header class="header flex-row">
     <section class="header__logo">
       <a href="index.html">YC</a>
     </section>
-    <section class="header__menu">
-     <div class="header__menu--links">
-       <a href="./profile.html">About me</a>
-       <a href="/">Blog</a>
-       <a href="./links.html">Links</a>
-     </div>
-     <div class="header__menu--button">
-       <a href="mailto:yahairavittoria@gmail.com">Get in touch</a>
-     </div>
+    <section class="toggle__collapse">
+      <div class="toggle__icons">
+        <img class="icon" src="./assets/icons/menu-icon.png" alt="menu icon">
+      </div>
+    </section>
+    <section class="header__menu flex-row">
+      <a href="./profile.html">About me</a>
+      <a href="/">Blog</a>
+      <a href="./links.html" >Links</a>
+      <a class="header__menu-btn" href="mailto:yahairavittoria@gmail.com">Get in touch</a>
    </section>
   </header>
   <main>
     <section class="home-intro-container">
-      <h1>
-        Yahaira Collado
-      </h1>
+      <h1>Yahaira Collado</h1>
       <h2>Front-end Developer | Designer</h2>
     </section>
     <section class="home-proyects-container">
@@ -147,29 +146,20 @@
             </section>
           </div>
         </div>
-        <div class="controls">
-          <span class="arrow left"><i><img id="my-img-left" src="./assets/icons/previous.png" alt="boton previus">
-            </i></span>
-          <span class="arrow right"><i><img id="my-img-right" src="./assets/icons/next.png" alt="boton next"></i></span>
-          <ul>
-            <li class="selected"></li>
-            <li></li>
-          </ul>
-        </div>
       </div>
     </section>
   </main>
-  <footer>
-    <section class="footer-container">
-      <div class="footer-left-section">
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__social-media">
         <p>Follow me:</p>
         <a href="https://github.com/yahacoral"><img src="./assets/icons/github.png" alt="logo de github"></a>
         <a href="https://www.linkedin.com/in/yahairacollado/"><img src="./assets/icons/linkedin.png" alt="logo de linkedin"></a>
       </div>
-     <div class="footer-right-section">
+     <div class="footer__copyright">
       <p>©2021 Yahaira Collado.</p>
      </div>
-    </section>
+    </div>
   </footer>
   <script src="./js/app.js"></script>
 </body>
