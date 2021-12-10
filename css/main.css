@@ -1,388 +1,325 @@
-@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;700&display=swap");
 
 @font-face {
   font-family: RoxboroughCF-Bold;
   src: url(../assets/fonts/RoxboroughCF-Bold.otf);
 }
 
-html {
-  font-size: 100%; /* 100% = 16px */
-}
-
-body{
+* {
   margin: 0;
   padding: 0;
-  background-color: #FFEADD;
-  background-image: url(../assets/images/grain.png);
-  background-position: center 0;
-  color: #1E0800;
+  box-sizing: border-box;
 }
 
-/* .home-body {
-display: fixed;
-top: 0;
-bottom: 0;
-left: 0;
-right: 0;
-} */
-
-.flex-row{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+html {
+  font-size: 100%; /* 100% = 16px */
+  background-color: #faf9f5;
+  background-image: url(../assets/images/grain.png);
+  background-position: center 0;
+  color: #212121;
+  scroll-behavior: smooth;
 }
 
 a {
   text-decoration: none;
-  cursor: pointer;
-  color:#1E0800;
+  color: #212121;
 }
 
-a:hover {
-  color: #D97A61;
-}
-
-/* Header */
-
-.header{
-  position: relative;
-  justify-content: space-between;
-  margin: 2rem 2rem 0 2rem;
-  height: 0rem;
-  min-height: 6vh;
-  overflow-y: hidden;
-  transition: height 0.8s cubic-bezier(0.26, -0.01, 0,  1.01);
-}
-
-.header__logo a{
-  display: block;
-  font-family: 'RoxboroughCF-Bold';
-  font-size: 1.85rem;
-}
-
-.header__menu{
-  display: flex;
-  align-items: center;
-}
-
-.header__menu a{
-  padding: 0 1rem;
-  font-family: 'Assistant', sans-serif;
-  font-size: 0.94rem;
-}
-
-.header__menu .header__menu-btn{
-  border: 0.1em solid #D97A61;
-  padding: 0.35em 1.5em;
-  border-radius: 0.25em;
-  font-family: 'Assistant', sans-serif;
-  font-size: 0.94rem;
-  text-align: center;
-}
-
-.header__menu .header__menu-btn:hover{
- background-color: #D97A61; 
- color: antiquewhite;
-}
-
-.toggle__collapse{
-  position: absolute;
-  top: 0%;
-  width: 100%;
-  cursor: pointer;
-  display: none;
-}
-
-.toggle__collapse .toggle__icons{
-  display: flex;
-  justify-content: flex-end;
-  padding: 0.5rem 0 0 0;
-}
-
-.collapse{
-  height: 50%;
-}
-
-@media only screen and (max-width: 600px){
-  .header{
-    flex-direction: column;
-    display: block;
-  }
-
-  .header__menu{
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 4rem 0 4rem 0;
-  }
-
-  .header__menu a {
-    padding: 0 0 0.5rem 0;
-    font-size: 1.5rem;
-    font-weight: 500;
-  }
-
-  .header__menu .header__menu-btn{
-    width: 82%;
-    margin-top: 20px;
-    font-size: 1.13rem;
-    padding: 0.75rem 1.5rem;
-  }
-
-  .toggle__collapse{
-    display: initial;
-  }
-
-}
-
-/* Main */
-
-main {
-  width: 100%;
-  height: auto;
-}
-
-.home-intro-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  margin-top: 1.25rem;
-}
-
-.home-intro-container h1 {
-  font-family:'RoxboroughCF-Bold';
-  font-size: 3.1rem;
-  margin-top: 1.25rem;
-  margin-bottom: 0.63rem;
-}
-
-.home-intro-container h2 {
-  font-family:'Assistant', sans-serif;
-  font-weight: 400;
-  font-size: 1.25rem; 
-  margin: 0;
-}
-
-.home-proyects-container {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin: 2.5rem 2.5rem 2.5rem;
-  text-align: center;
-}
-
-.home-proyects-container h3 {
-  margin: 0.63rem 0px 0.63rem;
-  font-family: 'Assistant', sans-serif;
-  font-size: 1.25rem;
+.link {
+  text-decoration: underline;
   font-weight: 500;
-  text-align: start;
 }
 
-.home-proyects-container .scroll-container {
-  width: 100%;
-}
+/* Home Page */
 
-.home-proyects-container .scroll-container .carousel{
-  height: 25rem;
-  width: 90%; 
-  margin: 1.25rem auto;
-  overflow: hidden;
-  position: relative;
-}
-
-.home-proyects-container .scroll-container .carousel .slider {
+.sidebar {
   display: flex;
-  height: 100%;
-  width: 200%;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1.5rem 0 2rem 2rem;
+  position: fixed;
+  left: 0; top: 0; bottom: 0;
+  width: 18rem;
 }
 
-.home-proyects-container .scroll-container .carousel .slider section {
-  flex-basis: 100%;
+.sidebar__logo {
+  font-family: "Assistant", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.sidebar__nav {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
 }
 
-.home-proyects-container .scroll-container .carousel .slider .article-container{
-  display: inline-flex;
-  margin: 15px 5px 20px 20px;
-  text-align: left;
+.sidebar__nav a {
+  padding: 0.3rem 0;
+  font-family: "Assistant", sans-serif;
+  font-size: 0.8rem;
+  transition: 0.2s;
 }
+
+.sidebar__nav a:hover {
+  font-weight: 600;
+ }
  
-.home-proyects-container .carousel .slider .article-container .box-image-container {
-  width: 220px;
-  height: 300px;
-  background-color: rgba(226, 163, 140,0.3);
-  border-radius: 6%;
-  margin-bottom: 15px;
+.sidebar__social-media {
+  margin: 0.6rem 0 0 0;
+}
+
+.sidebar__social-media img {
+  width: 1.4rem;
+  margin-right: 0.25rem;
+  opacity: 0.2;
+}
+
+.sidebar__social-media img:hover {
+  opacity: 1;
+}
+
+.home {
   display: flex;
-  text-align: center;
-  align-items: center;
-  z-index: 1;
+  flex-direction: column;
+  position: absolute;
+  left: 18rem; right: 8rem;
+  /* overflow: auto; */
 }
 
-.home-proyects-container .carousel .slider .article-container .box-image-container:hover {
-  transform: scale(1.15);
-  background-color: rgb(217, 123, 97,0.4);
-}
-
-.home-proyects-container .carousel .slider .article-container .box-image-container img {
-  width: 90%;
-}
-
-.home-proyects-container .carousel .slider .article-container .title-container {
-  margin-top: 30px;
-  font-family:  'Assistant', sans-serif;
-  font-size: 18px;
-}
-
-.home-proyects-container .carousel .slider .article-container .article-tag {
-  font-family: 'RoxboroughCF-Bold';
-  font-size: 15px;
-  letter-spacing: 2;
-  writing-mode: vertical-rl;
-  margin-left: 20px;
-}
-
-/* Footer */
-
-.footer {
-  width: 100%;
-  height: 3.75rem;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  bottom: 0;
-}
-
-.footer__container {
-  width: 96%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  background-clip: padding-box;  
-  font-size: 0.85rem;
-  font-family:'Assistant', sans-serif;
-  border-top: 0.06rem solid rgb(30, 8, 0, 0.2);
-}
-
-.footer__social-media {
-  justify-self: left;
-  margin-left: 2rem;
-  display: flex;
-  align-items: center;
-}
-
-.footer__social-media img {
-  display: flex;
-  align-items: center;
-  width: 1.56rem;
-  margin-left: 0.5rem;
-}
-
-.footer__copyright {
-  display: flex;
-  align-items: center;
-  justify-self: right;
-  margin-right: 2rem;
-}
-
-/* Profile page */
-
-.profile-tittle-container{
+.home__intro {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
-  margin: 30px 0 30px;
+  padding: 4rem 0;
+  min-height: 100vh;
 }
 
-.profile-tittle-container h1 {
-  font-family:'RoxboroughCF-Bold';
-  font-size: 35px;
+.home__intro h1 {
+  font-family: "RoxboroughCF-Bold";
+  font-size: 3.5rem;
+  line-height: 4rem;
   margin: 0;
 }
 
-.profile-main-container {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  margin: 30px;
+.home__intro h2 {
+  font-family: "Assistant", sans-serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+  margin: 1rem 0 0 0;
 }
 
-.profile-main-container .profile-resume-container {
+.home__projects {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  flex-direction: column;
+  padding: 2rem 0;
 }
 
-.profile-main-container .profile-image-container img{
-  width: 254px;
-}
-
-.profile-main-container .profile-image-container  p{
-  width: 254px;
-  font-family: 'Assistant', sans-serif;
-  font-size: 15px;
-  background-color: #E2A38C;
-  color: #FFEADD;
-  padding: 10px 10px 10px;
-  border-radius: 4px;
-}
-
-.profile-main-container .profile-description-container {
-  width: 80%;
-  margin: 20px auto;
-}
-
-.container-slider {
-  margin: auto;
-  overflow: hidden;
-  /* position: relative; */
-}
-
-.carousel-inner {
-  display: flex;
-  width: 300%;
-  height: 380px;
-  margin-left: -100%;
-}
-
-.slider-section {
+.home__projects h2 {
+  font-family: "Assistant", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
   width: 100%;
-  padding-right: 100px;
+  text-align: start;
+  border-bottom: 1px solid #000;
+  line-height: 0.1em;
+  margin: 0 2rem 0 0;
 }
 
-.slider-section h2 {
-  margin: 0px 0 30px 0;
-  font-family: 'Assistant', sans-serif;
-  font-size: 24px;
+.home__projects h2 span {
+  background: #faf9f5;
+  padding: 0 10px 0 0;
 }
 
-.slider-section p {
-  margin: 30px 0 30px 0px;
-  font-family: 'Assistant', sans-serif;
-  font-size: 17px;
-}
-
-.profile-control {
+.first-project {
   display: flex;
-  transform: translateY(-50%);
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 7rem;
+}
+
+.second-project{
+  display: flex;
+  flex-direction: column;
+  margin-top: 7rem;
+  width: 40rem;
+}
+
+.third-project{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 7rem;
+}
+
+.container {
+  width: 40rem;
+}
+
+.home__article h1 {
+  font-size: 2.5rem;
+  font-family: "RoxboroughCF-Bold";
+}
+
+.home__article img {
+  width:100%;
+  margin: 1.5rem 0;
+  filter: grayscale();
+  transition: filter 0.1s ease-in-out;
   cursor: pointer;
-  margin-top: 50px;
 }
 
-.profile-control img {
-  width: 40px;
-  margin-right: 10px;
+.home__article img:hover {
+  filter: none;
 }
 
-#my-img-left:hover {
-  content: url(../assets/icons/previous-hover.png);
+.home__projects__subtitle h2{
+  font-family: "Assistant", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: end;
+  border-bottom: 1px solid #000;
+  line-height: 0.1em;
+  margin: 0.5rem 0 1.5rem 0;
 }
 
-#my-img-right:hover {
-  content: url(../assets/icons/next-hover.png);
+.home__projects__subtitle h2 span {
+  background: #faf9f5;
+  padding: 0 0 0 10px;
 }
+
+.home__projects__description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.home__projects__description p {
+  font-family: "Assistant", sans-serif;
+  margin: 0.5rem 0;
+  text-align: start;
+  word-wrap: break-word;
+  width: 26rem;
+}
+
+.home__services {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+.home__services h2, .home__education h2{
+  font-family: "Assistant", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 100%;
+  text-align: start;
+  border-bottom: 1px solid #000;
+  line-height: 0.1em;
+  margin: 0.5rem 2rem 0 0;
+}
+
+.home__services h2 span, .home__education h2 span {
+  background: #faf9f5;
+  padding: 0 10px 0 0;
+}
+
+.home__services__grid{
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  margin: 4rem 0;
+}
+
+.home__education__grid {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr ;
+  margin: 4rem 0;
+}
+
+.home__services__grid h1, .home__education__grid h1{
+  font-size: 1.5rem;
+  font-family: "RoxboroughCF-Bold";
+  margin: 0.5rem 0;
+}
+
+.home__services__grid  p, .home__education__grid p {
+  font-family: "Assistant", sans-serif;
+  margin: 1rem 0;
+}
+
+.home__education {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+.home__education__grid ul {
+  padding-left: 1rem;
+  font-family: "Assistant", sans-serif;
+}
+
+.slider {
+  overflow: hidden;
+  width: 40rem;
+}
+
+.wrapper{
+  width: 100%;
+  display: flex;
+  animation: slide 16s infinite;
+}
+
+@keyframes slide{
+  0%{
+      transform: translateX(0);
+  }
+  25%{
+      transform: translateX(0);
+  }
+  30%{
+      transform: translateX(-100%);
+  }
+  50%{
+      transform: translateX(-100%);
+  }
+  55%{
+      transform: translateX(-200%);
+  }
+  75%{
+      transform: translateX(-200%);
+  }
+  80%{
+      transform: translateX(-300%);
+  }
+  100%{
+      transform: translateX(-300%);
+  }
+}
+
+.scroll {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.scroll img {
+  width: 2rem;
+}
+
+.scroll p {
+  font-family: "Assistant", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
 
 /* Primer Taller JS */
 
@@ -390,12 +327,12 @@ main {
   padding: 0 40px;
 }
 
-.taller1-title-container{
+.taller1-title-container {
   margin: 30px 0 30px;
 }
 
 .taller1-container h1 {
-  font-family: 'RoxboroughCF-Bold';
+  font-family: "RoxboroughCF-Bold";
   font-size: 35px;
   text-align: center;
   margin-bottom: 10px;
@@ -404,7 +341,7 @@ main {
 
 .taller1-container h2 {
   font-size: 20px;
-  font-family:'Assistant', sans-serif;
+  font-family: "Assistant", sans-serif;
   text-align: center;
   margin-top: 0;
 }
@@ -420,7 +357,7 @@ main {
 @media (min-width: 1024px) {
   .taller1-container {
     height: 79vh;
-    background-color: #FFEADD;
+    background-color: #ffeadd;
   }
 }
 
@@ -428,7 +365,7 @@ main {
   border: 2px solid;
   border-radius: 7px;
   padding: 6px 12px;
-  font: 600 1.125rem/1.6875rem 'Assistant', sans-serif;
+  font: 600 1.125rem/1.6875rem "Assistant", sans-serif;
 }
 
 .button:hover {
@@ -436,24 +373,24 @@ main {
 }
 
 .coralprimary {
-  background-color: #D97A61;
+  background-color: #d97a61;
   color: white;
-  border: 2px solid #D97A61;
+  border: 2px solid #d97a61;
   width: 100%;
 }
 
 .coralsecondary {
   background-color: white;
-  color: #D97A61;
+  color: #d97a61;
   width: 100%;
 }
 
 .card {
-  background-color: rgba(226, 163, 140,0.3);
+  background-color: rgba(226, 163, 140, 0.3);
   display: flex;
   flex-direction: column;
   padding-block: 30px;
-  gap:8px;
+  gap: 8px;
   border-radius: 17px;
 }
 
@@ -476,9 +413,9 @@ main {
 
 .card-title {
   font-size: 22px;
-  font-family:'RoxboroughCF-Bold';
+  font-family: "RoxboroughCF-Bold";
   margin: 0px 0 10px;
-  color: #1E0800;
+  color: #212121;
 }
 
 .card-form {
@@ -488,9 +425,9 @@ main {
   gap: 8px;
 }
 
-.card-form-subtitle{
+.card-form-subtitle {
   font-size: 16px;
-  font-family:'Assistant', sans-serif;
+  font-family: "Assistant", sans-serif;
   margin: 5px;
 }
 
@@ -519,8 +456,8 @@ main {
 }
 
 .card-form-result p {
-  font-size: 15px; 
-  font-family: 'Assistant', sans-serif;
+  font-size: 15px;
+  font-family: "Assistant", sans-serif;
   margin: 0;
 }
 
@@ -532,32 +469,32 @@ main {
   margin-top: 10px;
 }
 
-.div-button-repository{
-display: flex;
-justify-content: flex-end;
-align-items: center;
+.div-button-repository {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .div-button-repository a {
-  border:0.1em solid #D97A61;
-  padding:0.35em 1.2em;
-  margin:0 0.3em 0.3em 0;
-  border-radius:0.12em;
+  border: 0.1em solid #d97a61;
+  padding: 0.35em 1.2em;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
   box-sizing: border-box;
-  font-family: 'Assistant', sans-serif;
+  font-family: "Assistant", sans-serif;
   font-size: 15px;
-  text-align:center;
+  text-align: center;
 }
-.div-button-repository a:hover{
- background-color: #D97A61; 
- color: antiquewhite;
-} 
+.div-button-repository a:hover {
+  background-color: #d97a61;
+  color: antiquewhite;
+}
 
 .div-arrows-container img {
   width: 40px;
 }
 
-.footer-primertaller{
+.footer-primertaller {
   width: 100%;
   height: 60px;
   display: flex;
@@ -568,27 +505,37 @@ align-items: center;
 }
 
 /* Links page */
-.links-main{
+.links-main {
   margin: 0 auto;
 }
 
-.links-title-container{
+.links-title-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 30px 0 30px;
 }
 
 .links-title-container h1 {
-  font-family: 'RoxboroughCF-Bold';
+  font-family: "RoxboroughCF-Bold";
   margin: 0;
-  font-size: 35px;
+  font-size: 2.25rem;
+  text-align: center;
+  padding-bottom: 0.75rem;
+}
+
+.links-title-container h2 {
+  font-family: "Assistant", sans-serif;
+  margin: 0;
+  font-size: 1.13rem;
+  font-weight: 400;
   text-align: center;
 }
 
 /* Buscador de contenido */
 
-.links-search-container{
+.links-search-container {
   width: 530px;
   margin: 0 auto;
   margin-bottom: 25px;
@@ -611,12 +558,12 @@ align-items: center;
   font-size: 15px;
   border: none;
   outline: none;
-  background-color: #FFEADD;
+  background-color: #ffeadd;
 }
 
 .links-input-container:hover {
   box-shadow: 0 1px 6px 0 #20212447;
-  border-color: rgb(30, 8, 2) ;
+  border-color: rgb(30, 8, 2);
 }
 
 .search-icon {
@@ -626,7 +573,7 @@ align-items: center;
   background-size: contain;
   width: 18px;
   height: 18px;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 #box-search {
@@ -635,23 +582,23 @@ align-items: center;
   left: 50%;
   transform: translateX(-50%);
   width: 525px;
-  background: #FFEADD;
-  z-index: 3;
+  background: #ffeadd;
+  /* z-index: 3; */
   overflow: hidden;
   display: none;
 }
 
-#box-search li a{
+#box-search li a {
   display: block;
   width: 525px;
-  font-family: 'Assistant', sans-serif;
+  font-family: "Assistant", sans-serif;
   font-size: 15px;
   color: #777777;
   padding: 12px 20px;
 }
 
-#box-search li a:hover{
-  background:#ECC0AD;
+#box-search li a:hover {
+  background: #ecc0ad;
 }
 
 .links-list-container {
@@ -667,24 +614,24 @@ align-items: center;
 
 .links-list-container li {
   list-style: none;
-  border:0.1em solid rgb(30, 8, 2, 0.5);
-  background-color: rgb(236, 192, 173, 0.3) ;
-  padding:1.25em 1.25em;
-  margin:0 0 1.3em 0;
-  border-radius:0.45em;
+  border: 0.1em solid rgb(30, 8, 2, 0.5);
+  background-color: rgb(236, 192, 173, 0.3);
+  padding: 1.25em 1.25em;
+  margin: 0 0 1.3em 0;
+  border-radius: 0.45em;
   box-sizing: border-box;
 }
 
 .links-list-container a {
-  font-family: 'Assistant', sans-serif;
+  font-family: "Assistant", sans-serif;
   font-size: 25px;
   margin: 0;
 }
 
 .links-list-container p {
-  font-family: 'Assistant', sans-serif;
+  font-family: "Assistant", sans-serif;
   font-size: 15px;
-  color: #D97A61;
+  color: #d97a61;
   margin: 5px 0 0 0;
 }
 
