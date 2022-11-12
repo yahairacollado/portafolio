@@ -9,6 +9,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Assistant", sans-serif;
 }
 
 html {
@@ -106,8 +107,10 @@ a {
   font-family: "Assistant", sans-serif;
   font-weight: 500;
   font-size: 1.25rem;
-  margin: 1rem 0 0 0;
+  margin: 1rem 0 1rem 0;
 }
+
+/* Projects */
 
 .home__projects {
   display: flex;
@@ -131,25 +134,22 @@ a {
   padding: 0 10px 0 0;
 }
 
-.first-project {
+.first-project, .third-project {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   margin-top: 7rem;
 }
 
-.second-project{
+.second-project, .fourth-project{
   display: flex;
   flex-direction: column;
   margin-top: 7rem;
   width: 40rem;
 }
 
-.third-project{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  margin-top: 7rem;
+.fourth-project{
+  margin-bottom: 7rem;
 }
 
 .container {
@@ -207,7 +207,7 @@ a {
 .home__services {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   justify-content: center;
 }
 
@@ -237,7 +237,7 @@ a {
 .home__education__grid {
   display: grid;
   grid-template-columns: 0.5fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr ;
+  grid-template-rows: 1fr  2.5fr  5fr  2fr;
   margin: 4rem 0;
 }
 
@@ -642,4 +642,64 @@ a {
   justify-content: center;
   position: relative;
   bottom: 0;
+}
+
+.skills{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.skills li{
+  background-color: #ecc0ad;
+  color: white;
+  border-radius: 1rem;
+  margin: 0 0.5rem 0.5rem 0;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-family: "Assistant", sans-serif;
+}
+
+.skills li:hover{
+  background-color: #d97a61;
+}
+
+.graphic-design li {
+  background-color: #E7BF9C;
+}
+
+.graphic-design li:hover {
+  background-color: #d99961;
+}
+
+.ux-design li {
+  background-color: #E79CA3;
+}
+
+.ux-design li:hover {
+  background-color: #d9616b;
+}
+
+.container-logos{
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 5rem;
+  text-align: center;
+  font-family: "Assistant", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.container-logos .current {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.grid-campaign{
+  display: grid;
+  grid-template-columns: 1fr 2rem 1fr;
 }
