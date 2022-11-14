@@ -703,3 +703,29 @@ a {
   display: grid;
   grid-template-columns: 1fr 2rem 1fr;
 }
+
+.grid-social{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+.grid-social img{ 
+  width: 9rem;
+  cursor: cursor;
+}
+
+.contrast {
+  filter: grayscale() contrast(75%)!important;
+}
+
+.contrast:hover {
+  filter: none!important;
+}
+
+ /* .zoom-in{
+  transform: scale(2);
+  z-index: 100;
+} */
+

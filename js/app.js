@@ -8,3 +8,5 @@ toggleCollapse.onclick = (e) => {
     header.classList.toggle("collapse");
     e.target.classList.toggle("toggle-click");
 }
+
+// ZoomIn effect
