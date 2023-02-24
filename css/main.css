@@ -31,6 +31,19 @@ a {
   font-weight: 500;
 }
 
+.code-styled{
+  background-color: #DDE2E4;
+  color: #10162f;
+  padding: 0.1rem 0.25rem;
+  border-radius: 0.125rem;
+}
+
+.linked-text{
+  color:#d97a61;
+  font-weight:bold;
+  text-decoration: underline;
+}
+
 /* Home Page */
 
 .sidebar {
@@ -154,11 +167,7 @@ a {
   width: 40rem;
 }
 
-.fourth-project {
-  margin-bottom: 7rem;
-}
-
-.container {
+.container{
   width: 40rem;
 }
 
@@ -169,6 +178,7 @@ a {
 
 .home__article img {
   width: 100%;
+  object-fit: contain;
   margin: 1.5rem 0;
   filter: grayscale();
   transition: filter 0.1s ease-in-out;
@@ -213,12 +223,12 @@ a {
 .home__services {
   display: flex;
   flex-direction: column;
-  /* min-height: 100vh; */
   justify-content: center;
 }
 
 .home__services h2,
-.home__education h2 {
+.home__education h2,
+.home__skills h2 {
   font-family: "Assistant", sans-serif;
   font-size: 1rem;
   font-weight: 500;
@@ -230,7 +240,8 @@ a {
 }
 
 .home__services h2 span,
-.home__education h2 span {
+.home__education h2 span,
+.home__skills span {
   background: #faf9f5;
   padding: 0 10px 0 0;
 }
@@ -242,22 +253,24 @@ a {
   margin: 4rem 0;
 }
 
-.home__education__grid {
+.home__education__grid, .home__skills__grid {
   display: grid;
   grid-template-columns: 0.5fr 1fr;
-  grid-template-rows: 1fr 2.5fr 5fr 2fr;
   margin: 4rem 0;
-}
+  row-gap: 2rem;
+} 
 
 .home__services__grid h1,
-.home__education__grid h1 {
+.home__education__grid h1,
+.home__skills__grid h1 {
   font-size: 1.5rem;
   font-family: "RoxboroughCF-Bold";
   margin: 0.5rem 0;
 }
 
 .home__services__grid p,
-.home__education__grid p {
+.home__education__grid p,
+.home__skills__grid p {
   font-family: "Assistant", sans-serif;
   margin: 1rem 0;
 }
@@ -265,7 +278,6 @@ a {
 .home__education {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   justify-content: center;
 }
 
