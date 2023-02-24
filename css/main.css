@@ -39,7 +39,9 @@ a {
   justify-content: space-between;
   margin: 1.5rem 0 2rem 2rem;
   position: fixed;
-  left: 0; top: 0; bottom: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
   width: 18rem;
 }
 
@@ -64,8 +66,8 @@ a {
 
 .sidebar__nav a:hover {
   font-weight: 600;
- }
- 
+}
+
 .sidebar__social-media {
   margin: 0.6rem 0 0 0;
 }
@@ -84,7 +86,8 @@ a {
   display: flex;
   flex-direction: column;
   position: absolute;
-  left: 18rem; right: 8rem;
+  left: 18rem;
+  right: 8rem;
   /* overflow: auto; */
 }
 
@@ -134,21 +137,24 @@ a {
   padding: 0 10px 0 0;
 }
 
-.first-project, .third-project {
+.first-project,
+.third-project,
+.fifth-project {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   margin-top: 7rem;
 }
 
-.second-project, .fourth-project{
+.second-project,
+.fourth-project {
   display: flex;
   flex-direction: column;
   margin-top: 7rem;
   width: 40rem;
 }
 
-.fourth-project{
+.fourth-project {
   margin-bottom: 7rem;
 }
 
@@ -162,7 +168,7 @@ a {
 }
 
 .home__article img {
-  width:100%;
+  width: 100%;
   margin: 1.5rem 0;
   filter: grayscale();
   transition: filter 0.1s ease-in-out;
@@ -173,7 +179,7 @@ a {
   filter: none;
 }
 
-.home__projects__subtitle h2{
+.home__projects__subtitle h2 {
   font-family: "Assistant", sans-serif;
   font-size: 1rem;
   font-weight: 500;
@@ -211,7 +217,8 @@ a {
   justify-content: center;
 }
 
-.home__services h2, .home__education h2{
+.home__services h2,
+.home__education h2 {
   font-family: "Assistant", sans-serif;
   font-size: 1rem;
   font-weight: 500;
@@ -222,12 +229,13 @@ a {
   margin: 0.5rem 2rem 0 0;
 }
 
-.home__services h2 span, .home__education h2 span {
+.home__services h2 span,
+.home__education h2 span {
   background: #faf9f5;
   padding: 0 10px 0 0;
 }
 
-.home__services__grid{
+.home__services__grid {
   display: grid;
   grid-template-columns: 0.5fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -237,17 +245,19 @@ a {
 .home__education__grid {
   display: grid;
   grid-template-columns: 0.5fr 1fr;
-  grid-template-rows: 1fr  2.5fr  5fr  2fr;
+  grid-template-rows: 1fr 2.5fr 5fr 2fr;
   margin: 4rem 0;
 }
 
-.home__services__grid h1, .home__education__grid h1{
+.home__services__grid h1,
+.home__education__grid h1 {
   font-size: 1.5rem;
   font-family: "RoxboroughCF-Bold";
   margin: 0.5rem 0;
 }
 
-.home__services__grid  p, .home__education__grid p {
+.home__services__grid p,
+.home__education__grid p {
   font-family: "Assistant", sans-serif;
   margin: 1rem 0;
 }
@@ -269,36 +279,36 @@ a {
   width: 40rem;
 }
 
-.wrapper{
+.wrapper {
   width: 100%;
   display: flex;
   animation: slide 16s infinite;
 }
 
-@keyframes slide{
-  0%{
-      transform: translateX(0);
+@keyframes slide {
+  0% {
+    transform: translateX(0);
   }
-  25%{
-      transform: translateX(0);
+  25% {
+    transform: translateX(0);
   }
-  30%{
-      transform: translateX(-100%);
+  30% {
+    transform: translateX(-100%);
   }
-  50%{
-      transform: translateX(-100%);
+  50% {
+    transform: translateX(-100%);
   }
-  55%{
-      transform: translateX(-200%);
+  55% {
+    transform: translateX(-200%);
   }
-  75%{
-      transform: translateX(-200%);
+  75% {
+    transform: translateX(-200%);
   }
-  80%{
-      transform: translateX(-300%);
+  80% {
+    transform: translateX(-300%);
   }
-  100%{
-      transform: translateX(-300%);
+  100% {
+    transform: translateX(-300%);
   }
 }
 
@@ -319,7 +329,6 @@ a {
   font-size: 1rem;
   font-weight: 400;
 }
-
 
 /* Primer Taller JS */
 
@@ -644,13 +653,13 @@ a {
   bottom: 0;
 }
 
-.skills{
+.skills {
   display: flex;
   flex-direction: row;
   list-style: none;
 }
 
-.skills li{
+.skills li {
   background-color: #ecc0ad;
   color: white;
   border-radius: 1rem;
@@ -660,12 +669,12 @@ a {
   font-family: "Assistant", sans-serif;
 }
 
-.skills li:hover{
+.skills li:hover {
   background-color: #d97a61;
 }
 
 .graphic-design li {
-  background-color: #E7BF9C;
+  background-color: #e7bf9c;
 }
 
 .graphic-design li:hover {
@@ -673,14 +682,14 @@ a {
 }
 
 .ux-design li {
-  background-color: #E79CA3;
+  background-color: #e79ca3;
 }
 
 .ux-design li:hover {
   background-color: #d9616b;
 }
 
-.container-logos{
+.container-logos {
   margin-top: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -699,33 +708,31 @@ a {
   padding: 2rem;
 }
 
-.grid-campaign{
+.grid-campaign {
   display: grid;
   grid-template-columns: 1fr 2rem 1fr;
 }
 
-.grid-social{
+.grid-social {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-
 }
 
-.grid-social img{ 
+.grid-social img {
   width: 9rem;
   cursor: cursor;
 }
 
 .contrast {
-  filter: grayscale() contrast(75%)!important;
+  filter: grayscale() contrast(75%) !important;
 }
 
 .contrast:hover {
-  filter: none!important;
+  filter: none !important;
 }
 
- /* .zoom-in{
+/* .zoom-in{
   transform: scale(2);
   z-index: 100;
 } */
-
